@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.gestionhotel.controller.ReservationController"
+      spacing="10" alignment="CENTER" style="-fx-padding: 20;">
+
+    <!-- Section d'ajout de réservation -->
+    <HBox spacing="10">
+        <Label text="ID Client:"/>
+        <TextField fx:id="clientIdField" promptText="ID du client"/>
+        <Label text="ID Chambre:"/>
+        <TextField fx:id="roomIdField" promptText="ID de la chambre"/>
+        <Label text="Date d'arrivée:"/>
+        <TextField fx:id="checkInDateField" promptText="YYYY-MM-DD"/>
+        <Label text="Date de départ:"/>
+        <TextField fx:id="checkOutDateField" promptText="YYYY-MM-DD"/>
+        <Label text="Statut:"/>
+        <TextField fx:id="statusField" promptText="Statut de la réservation"/>
+    </HBox>
+
+    <Button text="Ajouter Réservation" onAction="#handleAddReservation"/>
+
+    <!-- Table pour afficher les réservations -->
+    <TableView fx:id="reservationTable" style="-fx-min-width: 600px;">
+        <columns>
+            <TableColumn fx:id="clientIdColumn" text="ID Client"/>
+            <TableColumn fx:id="roomIdColumn" text="ID Chambre"/>
+            <TableColumn fx:id="checkInDateColumn" text="Date d'arrivée"/>
+            <TableColumn fx:id="checkOutDateColumn" text="Date de départ"/>
+            <TableColumn fx:id="statusColumn" text="Statut"/>
+        </columns>
+    </TableView>
+
+    <Button text="Supprimer Réservation" onAction="#handleDeleteReservation"/>
+</VBox>
+

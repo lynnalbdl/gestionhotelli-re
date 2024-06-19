@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.RoomController"
+      spacing="10" alignment="CENTER" style="-fx-padding: 20;">
+
+    <!-- Section d'ajout de chambre -->
+    <HBox spacing="10">
+        <Label text="Numéro de Chambre:"/>
+        <TextField fx:id="roomNumberField" promptText="Numéro de la chambre"/>
+        <Label text="Type:"/>
+        <TextField fx:id="typeField" promptText="Type de la chambre"/>
+        <Label text="Prix:"/>
+        <TextField fx:id="priceField" promptText="Prix par nuit"/>
+    </HBox>
+
+    <Button text="Ajouter Chambre" onAction="#handleAddRoom"/>
+
+    <!-- Table pour afficher les chambres -->
+    <TableView fx:id="roomTable" style="-fx-min-width: 600px;">
+        <columns>
+            <TableColumn fx:id="roomNumberColumn" text="Numéro"/>
+            <TableColumn fx:id="typeColumn" text="Type"/>
+            <TableColumn fx:id="priceColumn" text="Prix"/>
+        </columns>
+    </TableView>
+
+    <Button text="Supprimer Chambre" onAction="#handleDeleteRoom"/>
+</VBox>
+
