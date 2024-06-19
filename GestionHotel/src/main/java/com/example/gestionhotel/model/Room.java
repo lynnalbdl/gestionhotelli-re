@@ -13,7 +13,7 @@ public class Room {
         this.price = new SimpleDoubleProperty();
     }
 
-    // Getters for properties
+
     public int getRoomNumber() {
         return roomNumber.get();
     }

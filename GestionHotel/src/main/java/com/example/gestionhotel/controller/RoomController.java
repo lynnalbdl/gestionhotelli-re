@@ -52,7 +52,6 @@ public class RoomController {
         Room newRoom = new Room(roomNumber, type, price);
         rooms.add(newRoom);
 
-        // Effacer les champs après l'ajout
         clearFields();
     }
 

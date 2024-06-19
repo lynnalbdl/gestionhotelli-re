@@ -53,7 +53,6 @@ public class MainMenuController {
 
     @FXML
     private void showRoomManagement() {
-        // Ajoutez ici la logique pour gérer les chambres
     }
 
     @FXML
@@ -63,7 +62,6 @@ public class MainMenuController {
 
     @FXML
     private void showClientManagement() {
-        // Ajoutez ici la logique pour gérer la connexion
     }
 }
 

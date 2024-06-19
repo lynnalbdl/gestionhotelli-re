@@ -5,7 +5,7 @@ module com.example.gestionhotel {
     requires jdk.javadoc;
 
     opens com.example.gestionhotel to javafx.fxml;
-    opens controllers to javafx.fxml;  // Ajoutez cette ligne pour permettre l'accès par reflection
+    opens controllers to javafx.fxml;
     exports com.example.gestionhotel;
 }
 
